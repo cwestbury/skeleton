@@ -7,3 +7,15 @@ CREATE TABLE receipts (
 
   PRIMARY KEY (id)
 );
+
+CREATE TABLE tags (
+  id INT UNSIGNED AUTO_INCREMENT,
+  tag VARCHAR(255),
+  recieptID INT,
+  FOREIGN KEY (recieptID ) REFERENCES receipts(id),
+
+  PRIMARY KEY (id)
+);
+
+
+

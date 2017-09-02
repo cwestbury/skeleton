@@ -24,6 +24,12 @@ public class CreateReceiptRequestTest {
         assertThat(validator.validate(receipt), empty());
     }
 
+//    @Test
+//    public void testMissingTags(){
+//        CreateReceiptRequest receipt = new CreateReceiptRequest();
+//
+//    }
+
     @Test
     public void testMissingAmount() {
         CreateReceiptRequest receipt = new CreateReceiptRequest();

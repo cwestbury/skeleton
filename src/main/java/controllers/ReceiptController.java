@@ -4,6 +4,8 @@ import api.CreateReceiptRequest;
 import api.ReceiptResponse;
 import dao.ReceiptDao;
 import generated.tables.records.ReceiptsRecord;
+import org.jooq.tools.json.JSONArray;
+import org.jooq.tools.json.JSONObject;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -33,4 +35,5 @@ public class ReceiptController {
         List<ReceiptsRecord> receiptRecords = receipts.getAllReceipts();
         return receiptRecords.stream().map(ReceiptResponse::new).collect(toList());
     }
+
 }
